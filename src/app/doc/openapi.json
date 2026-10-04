@@ -1,10 +1,10 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "VLibras Translator API",
-    "description": "VLibras Translator is an open source API developed for automatic translation from Brazillian Portuguese to Brazilian Sign Language (LIBRAS)",
+    "title": "Biblionx LSRD Translator API",
+    "description": "Biblionx LSRD Translator is an open source API developed for automatic translation from Spanish to Dominican Sign Language (LSRD)",
     "contact": {
-      "email": "vlibras@lavid.ufpb.br"
+      "url": "https://github.com/Biblionx-Project"
     },
     "license": {
       "name": "GNU Lesser General Public License v3.0",

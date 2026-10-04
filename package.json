@@ -4,8 +4,7 @@
   "version": "2.4.0",
   "private": true,
   "contributors": [
-    "Wesnydy Ribeiro <wesnydy@lavid.ufpb.br>",
-    "Jonathan Brilhante <jonathan.brilhante@lavid.ufpb.br>"
+    "Biblionx Team"
   ],
   "scripts": {
     "build": "babel src --out-dir dist --copy-files --include-dotfiles",

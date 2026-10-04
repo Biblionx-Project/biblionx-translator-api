@@ -22,8 +22,8 @@ services:
       AMQP_PROTOCOL: amqp
       AMQP_HOST: rabbitmq
       AMQP_PORT: 5672
-      AMQP_USER: vlibras
-      AMQP_PASS: vlibras
+      AMQP_USER: ${AMQP_USER:-guest}
+      AMQP_PASS: ${AMQP_PASS:-guest}
       TRANSLATOR_QUEUE: "translate.to_text"
       VIDEOMAKER_QUEUE: "translate.to_video"
       API_CONSUMER_QUEUE: "amq.rabbitmq.reply-to"
@@ -53,8 +53,8 @@ services:
     volumes:
       - rabbitmq-data:/var/lib/rabbitmq
     environment:
-      RABBITMQ_DEFAULT_USER: vlibras
-      RABBITMQ_DEFAULT_PASS: vlibras
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER:-guest}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS:-guest}
 
 networks:
   redis-net:

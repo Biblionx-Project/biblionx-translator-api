@@ -310,8 +310,7 @@ To access the documentation and usage examples of the Biblionx Translator API, s
 
 ## Contributors
 
-* Jonathan Brilhante - <jonathan.brilhante@lavid.ufpb.br>
-* Wesnydy Ribeiro - <wesnydy@lavid.ufpb.br>
+Originally developed by the Biblionx team.
 
 ## License
 
