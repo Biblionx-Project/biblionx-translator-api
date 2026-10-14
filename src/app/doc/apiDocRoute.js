@@ -4,7 +4,7 @@ import swaggerDoc from './openapi.json';
 
 const options = {
   customCss: '.swagger-ui .topbar { display: none }',
-  customSiteTitle: 'VLibras Docs',
+  customSiteTitle: 'Biblionx LSRD Translator API Docs',
 };
 
 const apiDocRoute = Router();

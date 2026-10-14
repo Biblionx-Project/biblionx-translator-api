@@ -1,6 +1,6 @@
 {
   "name": "biblionx-translator-api",
-  "description": "VLibras Translation Service API",
+  "description": "Biblionx translation service API (Spanish text to Dominican Sign Language, LSRD)",
   "version": "2.4.0",
   "private": true,
   "contributors": [
@@ -8,8 +8,8 @@
   ],
   "scripts": {
     "build": "babel src --out-dir dist --copy-files --include-dotfiles",
-    "dev": "npm run build && DEBUG=vlibras-translator-*:* NODE_ENV=dev node dist/index.js",
-    "start": "DEBUG=vlibras-translator-api:info NODE_ENV=production node dist/index.js",
+    "dev": "npm run build && DEBUG=biblionx-translator-*:* NODE_ENV=dev node dist/index.js",
+    "start": "DEBUG=biblionx-translator-api:info NODE_ENV=production node dist/index.js",
     "prepare": "node .husky/install.mjs"
   },
   "engines": {

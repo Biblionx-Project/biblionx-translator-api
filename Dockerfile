@@ -21,7 +21,7 @@ WORKDIR /app
 COPY --from=build /src/node_modules node_modules
 COPY --from=build /src/dist dist
 
-ENV DEBUG biblionx-translator-*:*,vlibras-translator-*:*
+ENV DEBUG biblionx-translator-*:*
 ENV NODE_ENV production
 
 CMD ["node", "./dist/index.js"]

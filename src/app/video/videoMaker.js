@@ -86,11 +86,11 @@ const videoStatus = async function videoStatusController(req, res, next) {
       return next(createError(404, VIDEOMAKER_ERROR.processNotFound));
     }
 
-    const librasVideoStatus = expired === true
+    const lsrdVideoStatus = expired === true
       ? { status: VIDEO_STATUS.expired }
       : { status, ...(size && { size }) };
 
-    return res.status(200).json(librasVideoStatus);
+    return res.status(200).json(lsrdVideoStatus);
   } catch (error) {
     return next(error);
   }
@@ -113,7 +113,7 @@ const videoDownload = async function videoDownloadController(req, res, next) {
       return next(createError(404, VIDEOMAKER_ERROR.videoExpired));
     }
 
-    return res.status(200).download(path, 'vlibrasvideo.mp4');
+    return res.status(200).download(path, 'biblionx-lsrd-video.mp4');
   } catch (error) {
     return next(error);
   }

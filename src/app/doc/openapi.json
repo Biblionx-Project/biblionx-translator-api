@@ -14,26 +14,22 @@
   },
   "servers": [
     {
-      "url": "http://traducao2.vlibras.gov.br",
-      "description": "VLibras Translator v2 Brazilian Government Server"
-    },
-    {
       "url": "http://localhost:3000",
-      "description": "VLibras Translator Localhost Server"
+      "description": "Biblionx LSRD Translator Localhost Server"
     }
   ],
   "tags": [
     {
       "name": "translations",
-      "description": "Automatic translation from Brazillian Portuguese to LIBRAS"
+      "description": "Automatic translation from Spanish to LSRD"
     },
     {
       "name": "reviews",
-      "description": "Human revision of VLibras Translator translations"
+      "description": "Human review of Biblionx LSRD Translator translations"
     },
     {
       "name": "videos",
-      "description": "Automatic generation of LIBRAS videos"
+      "description": "Automatic generation of LSRD videos"
     }
   ],
   "paths": {
@@ -43,7 +39,7 @@
           "translations"
         ],
         "summary": "Translates a text to text",
-        "description": "Translates a text written in Brazillian Portuguese to an equivalent text in LIBRAS.",
+        "description": "Translates a text written in Spanish (Dominican Republic) to an equivalent text in LSRD gloss.",
         "operationId": "translateText",
         "requestBody": {
           "description": "Text to translate",
@@ -96,7 +92,7 @@
           "reviews"
         ],
         "summary": "Submits a review of translated text",
-        "description": "Submits a review of the text translated by the VLibras Translation Service.",
+        "description": "Submits a review of the text translated by the Biblionx LSRD Translation Service.",
         "operationId": "reviewTranslation",
         "requestBody": {
           "description": "Review of the translated text",
@@ -111,7 +107,7 @@
         },
         "responses": {
           "200": {
-            "description": "Review submited",
+            "description": "Review submitted",
             "content": {
               "text/plain": {
                 "schema": {
@@ -148,8 +144,8 @@
         "tags": [
           "videos"
         ],
-        "summary": "Generates a LIBRAS video",
-        "description": "Generates a LIBRAS video from a previously translated text.",
+        "summary": "Generates an LSRD video",
+        "description": "Generates an LSRD video from a previously translated text.",
         "operationId": "videoGeneration",
         "requestBody": {
           "description": "Translated text and parameters to generate the video",
@@ -201,8 +197,8 @@
         "tags": [
           "videos"
         ],
-        "summary": "Gets the status of a LIBRAS video generation",
-        "description": "Gets the current status of a LIBRAS video generation process.",
+        "summary": "Gets the status of an LSRD video generation",
+        "description": "Gets the current status of an LSRD video generation process.",
         "operationId": "videoGenerationStatus",
         "parameters": [
           {
@@ -254,8 +250,8 @@
         "tags": [
           "videos"
         ],
-        "summary": "Downloads a generated LIBRAS video",
-        "description": "Downloads a generated LIBRAS video, the file will be available for 1 hour.",
+        "summary": "Downloads a generated LSRD video",
+        "description": "Downloads a generated LSRD video; the file will be available for 1 hour.",
         "operationId": "downloadGeneratedVideo",
         "parameters": [
           {
@@ -327,13 +323,13 @@
         "properties": {
           "text": {
             "type": "string",
-            "example": "o rato roeu a roupa do rei de roma"
+            "example": "el ratón royó la ropa del rey de roma"
           }
         }
       },
       "TranslatedText": {
         "type": "string",
-        "example": "RATO ROER ROUPA REI ROMA"
+        "example": "RATÓN ROER ROPA REY ROMA"
       },
       "Review": {
         "required": [
@@ -345,11 +341,11 @@
         "properties": {
           "text": {
             "type": "string",
-            "example": "o rato roeu a roupa do rei de roma"
+            "example": "el ratón royó la ropa del rey de roma"
           },
           "translation": {
             "type": "string",
-            "example": "RATO ROER ROUPA REI ROMA"
+            "example": "RATÓN ROER ROPA REY ROMA"
           },
           "rating": {
             "type": "string",
@@ -361,7 +357,7 @@
           },
           "review": {
             "type": "string",
-            "example": "RATO ROER ROUPA REI ROMA"
+            "example": "RATÓN ROER ROPA REY ROMA"
           }
         }
       },
@@ -379,7 +375,7 @@
         "properties": {
           "gloss": {
             "type": "string",
-            "example": "RATO ROER ROUPA REI ROMA"
+            "example": "RATÓN ROER ROPA REY ROMA"
           },
           "avatar": {
             "type": "string",
