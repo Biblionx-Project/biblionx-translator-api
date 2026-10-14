@@ -23,25 +23,11 @@ async function storeStats(req) {
   const phrases = await phraseBreaker(req.body.text);
 
   phrases.forEach(async (phrase) => {
-    const translationAlreadyExists = await Hit.findOne({ text: phrase });
-
-    if (translationAlreadyExists) {
-      const translationHit = new Hit({
-        text: translationAlreadyExists.text,
-        hits: translationAlreadyExists.hits + 1,
-      });
-      await translationHit.save();
-      return translationHit;
-    }
-
-    const translationHit = new Hit({
-      text: phrase,
-      hits: 1,
-    });
-
-    await translationHit.save();
-
-    return translationHit;
+    await Hit.findOneAndUpdate(
+      { text: phrase },
+      { $inc: { hits: 1 } },
+      { upsert: true },
+    );
   });
 }
 

@@ -32,8 +32,8 @@ const reviewSchema = new Schema({
 }, options);
 
 reviewSchema.pre('save', function toUpper() {
-  this.translation.toUpperCase();
-  this.review.toUpperCase();
+  if (this.translation) this.translation = this.translation.toUpperCase();
+  if (this.review) this.review = this.review.toUpperCase();
 });
 
 const Review = model('Review', reviewSchema);

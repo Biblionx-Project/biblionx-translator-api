@@ -1,5 +1,5 @@
 {
-  "name": "vlibras-translator-api",
+  "name": "biblionx-translator-api",
   "description": "VLibras Translation Service API",
   "version": "2.4.0",
   "private": true,
@@ -13,7 +13,7 @@
     "prepare": "node .husky/install.mjs"
   },
   "engines": {
-    "node": "10.16"
+    "node": ">=18.0.0"
   },
   "lint-staged": {
     "*.js": "eslint --fix"

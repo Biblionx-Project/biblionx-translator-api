@@ -308,10 +308,28 @@ To access the documentation and usage examples of the Biblionx Translator API, s
 
 [http://localhost:3000/docs](http://localhost:3000/docs)
 
-## Contributors
+## Environment Variables
 
-Originally developed by the Biblionx team.
+Copy `.env.example` to `.env`. Both `BIBLIONX_*` and standard variables are supported:
+
+| Variable | Description | Default |
+| :--- | :--- | :--- |
+| `BIBLIONX_PORT` / `PORT` | HTTP server port | `3000` |
+| `BIBLIONX_DB_HOST` / `DB_HOST` | MongoDB host | `localhost` (`mongo` in Docker) |
+| `BIBLIONX_DB_PORT` / `DB_PORT` | MongoDB port | `27017` |
+| `BIBLIONX_DB_NAME` / `DB_NAME` | MongoDB database name | `biblionx-db` |
+| `BIBLIONX_CACHE_HOST` / `CACHE_HOST` | Redis cache host | `localhost` (`redis` in Docker) |
+| `BIBLIONX_CACHE_PORT` / `CACHE_PORT` | Redis cache port | `6379` |
+| `BIBLIONX_CACHE_NAME` / `CACHE_NAME` | Redis client connection name | `biblionx-cache` |
+| `BIBLIONX_AMQP_HOST` / `AMQP_HOST` | RabbitMQ broker host | `localhost` (`rabbitmq` in Docker) |
+| `BIBLIONX_AMQP_PORT` / `AMQP_PORT` | RabbitMQ broker port | `5672` |
+| `BIBLIONX_TRANSLATOR_QUEUE` / `TRANSLATOR_QUEUE` | Asynchronous translation job queue | `translate.to_text` |
+| `BIBLIONX_VIDEOMAKER_QUEUE` / `VIDEOMAKER_QUEUE` | Video rendering queue | `translate.to_video` |
+
+## Contributors & Attribution
+
+Originally developed by the VLibras team (Laboratório de Aplicações de Vídeo Digital - LAVID / UFPB and Brazilian Ministry of Planning/Management). Adapted, modernized, and maintained as an architectural reference for Dominican Sign Language (LSRD) by the Biblionx team (UNICDA thesis project).
 
 ## License
 
-This project is licensed under the LGPLv3 License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the LGPLv3 License - see the [LICENSE](LICENSE) file for details. Derived from the open-source VLibras project, maintaining full compliance with the GNU Lesser General Public License v3.0.
